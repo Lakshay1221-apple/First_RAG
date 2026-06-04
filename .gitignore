@@ -1,0 +1,17 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Local source documents and generated vector indexes
+Data/Pdf_files/
+Data/Text_files/
+*.pdf
+*.txt
+Notebook/vector_store/
