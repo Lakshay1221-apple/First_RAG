@@ -15,3 +15,4 @@ Data/Text_files/
 *.pdf
 *.txt
 Notebook/vector_store/
+.env
