@@ -1,5 +1,8 @@
 # RAG Pipeline
 
+
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/35aacf93-12f8-4920-87d4-7e62d7fd97ff" />
+
 A practical Retrieval-Augmented Generation (RAG) project for loading text and PDF documents, splitting them into retrievable chunks, generating semantic embeddings, storing them in a Chroma vector database, and retrieving the most relevant context for a user query.
 
 The project is organized as an interactive notebook-first workflow so each stage of the RAG pipeline can be inspected, tested, and adapted independently.
