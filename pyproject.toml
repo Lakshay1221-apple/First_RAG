@@ -16,6 +16,7 @@ dependencies = [
     "pypdf",
     "python-dotenv>=1.2.2",
     "reportlab>=4.5.1",
+    "ollama>=0.4.0",
     "sentence-transformers>=5.5.1",
     "torch>=2.12.0",
     "transformers>=5.10.1",

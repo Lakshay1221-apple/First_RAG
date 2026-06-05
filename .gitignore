@@ -1,6 +1,9 @@
 # Python-generated files
 __pycache__/
 *.py[oc]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
 build/
 dist/
 wheels/
@@ -9,10 +12,21 @@ wheels/
 # Virtual environments
 .venv
 
+# Notebook-generated files
+.ipynb_checkpoints/
+Notebook/.ipynb_checkpoints/
+Notebook/vector_store/
+
+# Local environment and secrets
+.env
+
 # Local source documents and generated vector indexes
 Data/Pdf_files/
 Data/Text_files/
 *.pdf
 *.txt
-Notebook/vector_store/
-.env
+
+# Simple_Rag currently builds the in-memory vector database at runtime.
+# Keep this section ready for any persisted local vector/cache output.
+Simple_Rag/vector_store/
+Simple_Rag/.cache/
