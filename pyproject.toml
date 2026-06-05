@@ -19,4 +19,5 @@ dependencies = [
     "sentence-transformers>=5.5.1",
     "torch>=2.12.0",
     "transformers>=5.10.1",
+    "typesense>=2.0.0",
 ]

@@ -102,3 +102,29 @@ Ignored paths include:
 - The notebook currently uses absolute local paths. If the project is moved to another machine, update those paths or convert them to relative paths.
 - Chroma vector store files are generated artifacts and should be rebuilt locally instead of committed.
 - Keep source documents out of version control unless they are small, public, and intentionally part of the project.
+
+## Notebook Updates
+
+Recent changes to `Notebook/document.ipynb` (apply before running the notebook):
+
+- The notebook now loads environment variables from the project root `.env` (works when running from the `Notebook/` folder).
+- The setup cell reads `GOOGLE_API_KEY` first and falls back to `GEMINI_API_KEY` for compatibility with different deployment setups.
+- You can override the Gemini model name with the `GEMINI_MODEL` variable in your `.env` file (do this if your account does not support the default model).
+- The LLM setup cell no longer auto-runs generation; run a separate test cell after confirming a supported `GEMINI_MODEL` to avoid runtime model errors.
+- Retriever and context assembly were made more robust: the retriever output may be dicts or Document-like objects, and the code now handles both shapes.
+
+Quick steps to run after pulling these updates:
+
+1. Add your API key to `.env` at the project root. Example:
+
+```
+GOOGLE_API_KEY=your_api_key_here
+# optionally override model
+GEMINI_MODEL=your_preferred_model_name
+```
+
+2. Open `Notebook/document.ipynb` and run the setup cells (do not run an LLM generation cell until you confirm the model is available for your key).
+
+3. Run a dedicated test cell to call the LLM after confirming `GEMINI_MODEL` is valid for your account.
+
+If you want, I can also add a small example test cell to the notebook that checks model availability without sending a full generation request.
